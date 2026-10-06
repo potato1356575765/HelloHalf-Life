@@ -1,0 +1,13 @@
+{
+  "sheet": "mission",
+  "about": "The objective chain shown to the player. One row = one objective.",
+  "columns": ["id", "text", "complete_when", "blip_at", "next", "verified"],
+  "refs": { "blip_at": "locations", "next": "mission" },
+  "rows": [
+    { "id": "intro", "text": "Someone new moved in. He never leaves the house. Go take a look.", "complete_when": "player within 40 m of neighbor_house", "blip_at": "neighbor_house", "next": "get_in", "verified": false },
+    { "id": "get_in", "text": "Get inside without him seeing you.", "complete_when": "player inside neighbor_house", "blip_at": "neighbor_house", "next": "find_basement_key", "verified": false },
+    { "id": "find_basement_key", "text": "The basement is locked. Find the key.", "complete_when": "player holds basement_key", "blip_at": "spawn_basement_key", "next": "open_basement", "verified": false },
+    { "id": "open_basement", "text": "Open the basement.", "complete_when": "basement_door opened", "blip_at": "basement_door", "next": "end", "verified": false },
+    { "id": "end", "text": "...you shouldn't have seen that. (End of v0.1)", "complete_when": "never", "blip_at": "basement_door", "next": "end", "verified": false }
+  ]
+}

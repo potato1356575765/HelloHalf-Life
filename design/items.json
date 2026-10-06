@@ -1,0 +1,11 @@
+{
+  "sheet": "items",
+  "about": "Things the player picks up. One row = one item.",
+  "columns": ["id", "prop_model", "spawn_at", "opens", "verified"],
+  "refs": { "spawn_at": "locations", "opens": "locations" },
+  "rows": [
+    { "id": "red_key", "prop_model": "", "spawn_at": "spawn_red_key", "opens": "front_door", "verified": false },
+    { "id": "crowbar", "prop_model": "", "spawn_at": "spawn_crowbar", "opens": "back_window", "verified": false },
+    { "id": "basement_key", "prop_model": "", "spawn_at": "spawn_basement_key", "opens": "basement_door", "verified": false }
+  ]
+}

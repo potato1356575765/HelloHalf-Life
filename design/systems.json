@@ -1,0 +1,17 @@
+{
+  "sheet": "systems",
+  "about": "Every GTA V game system the mashup touches. One row = one system = one C++ struct/module.",
+  "columns": ["id", "summary", "reads_sheet", "uses_hooks", "in_v01", "verified"],
+  "refs": { "uses_hooks": "hooks" },
+  "rows": [
+    { "id": "story_mode_guard", "summary": "Mod does nothing unless the player is in story mode; unloads its behaviour if GTA Online starts.", "reads_sheet": "rules", "uses_hooks": ["network_is_session_started"], "in_v01": true, "verified": false },
+    { "id": "neighbor_spawn", "summary": "Spawns the Neighbor ped at his house and keeps him there between visits.", "reads_sheet": "locations", "uses_hooks": ["create_ped", "request_model", "set_ped_keep_task"], "in_v01": true, "verified": false },
+    { "id": "neighbor_ai", "summary": "State machine (patrol, suspicious, chase, catch, set trap, return home) driven by the neighbor_states sheet.", "reads_sheet": "neighbor_states", "uses_hooks": ["task_wander_in_area", "task_go_to_entity", "has_entity_clear_los_to_entity", "get_entity_coords"], "in_v01": true, "verified": false },
+    { "id": "trap_learning", "summary": "Remembers where the player got caught or entered and places a trap from the traps sheet on that route next time.", "reads_sheet": "traps", "uses_hooks": ["create_object", "get_entity_coords"], "in_v01": true, "verified": false },
+    { "id": "keys_and_locks", "summary": "House doors stay locked until the player carries the item that opens them.", "reads_sheet": "items", "uses_hooks": ["door_system_set_door_state", "create_object"], "in_v01": true, "verified": false },
+    { "id": "caught_reset", "summary": "When the Neighbor catches the player: screen fades, player wakes up back at home instead of dying.", "reads_sheet": "rules", "uses_hooks": ["do_screen_fade_out", "set_entity_coords"], "in_v01": true, "verified": false },
+    { "id": "wanted_escalation", "summary": "After enough catches the Neighbor calls the cops: GTA wanted stars on the next break-in.", "reads_sheet": "rules", "uses_hooks": ["set_player_wanted_level"], "in_v01": true, "verified": false },
+    { "id": "mission_flow", "summary": "Objectives text and blip from 'new neighbor moved in' to 'what is in the basement'.", "reads_sheet": "mission", "uses_hooks": ["add_blip_for_coord", "show_subtitle"], "in_v01": true, "verified": false },
+    { "id": "save_progress", "summary": "Keeps catches, learned trap spots and found items in a small file next to the mod so a session can be resumed.", "reads_sheet": "rules", "uses_hooks": [], "in_v01": false, "verified": false }
+  ]
+}

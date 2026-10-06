@@ -1,0 +1,24 @@
+{
+  "sheet": "hooks",
+  "about": "Every GTA V native the mod calls. Hashes must be checked against the game build before they count as verified. Called through the mod's own bundled invoker (no Script Hook V).",
+  "columns": ["id", "native", "hash", "purpose", "verified"],
+  "refs": {},
+  "rows": [
+    { "id": "network_is_session_started", "native": "NETWORK::NETWORK_IS_SESSION_STARTED", "hash": "", "purpose": "story mode guard", "verified": false },
+    { "id": "player_ped_id", "native": "PLAYER::PLAYER_PED_ID", "hash": "", "purpose": "find the player", "verified": false },
+    { "id": "request_model", "native": "STREAMING::REQUEST_MODEL", "hash": "", "purpose": "load the Neighbor and prop models", "verified": false },
+    { "id": "create_ped", "native": "PED::CREATE_PED", "hash": "", "purpose": "spawn the Neighbor", "verified": false },
+    { "id": "set_ped_keep_task", "native": "PED::SET_PED_KEEP_TASK", "hash": "", "purpose": "keep his AI task running", "verified": false },
+    { "id": "task_wander_in_area", "native": "TASK::TASK_WANDER_IN_AREA", "hash": "", "purpose": "patrol", "verified": false },
+    { "id": "task_go_to_entity", "native": "TASK::TASK_GO_TO_ENTITY", "hash": "", "purpose": "chase", "verified": false },
+    { "id": "has_entity_clear_los_to_entity", "native": "ENTITY::HAS_ENTITY_CLEAR_LOS_TO_ENTITY", "hash": "", "purpose": "can he see the player", "verified": false },
+    { "id": "get_entity_coords", "native": "ENTITY::GET_ENTITY_COORDS", "hash": "", "purpose": "positions", "verified": false },
+    { "id": "set_entity_coords", "native": "ENTITY::SET_ENTITY_COORDS", "hash": "", "purpose": "wake player up after catch", "verified": false },
+    { "id": "create_object", "native": "OBJECT::CREATE_OBJECT", "hash": "", "purpose": "traps and items", "verified": false },
+    { "id": "door_system_set_door_state", "native": "OBJECT::DOOR_SYSTEM_SET_DOOR_STATE", "hash": "", "purpose": "lock and unlock doors", "verified": false },
+    { "id": "do_screen_fade_out", "native": "CAM::DO_SCREEN_FADE_OUT", "hash": "", "purpose": "catch fade", "verified": false },
+    { "id": "set_player_wanted_level", "native": "PLAYER::SET_PLAYER_WANTED_LEVEL", "hash": "", "purpose": "cops", "verified": false },
+    { "id": "add_blip_for_coord", "native": "HUD::ADD_BLIP_FOR_COORD", "hash": "", "purpose": "objective blip", "verified": false },
+    { "id": "show_subtitle", "native": "HUD::BEGIN_TEXT_COMMAND_PRINT", "hash": "", "purpose": "objective text", "verified": false }
+  ]
+}

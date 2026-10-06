@@ -1,0 +1,11 @@
+{
+  "sheet": "traps",
+  "about": "Traps the Neighbor learns to place on the player's routes. One row = one trap.",
+  "columns": ["id", "prop_model", "effect", "ragdoll_ms", "alerts_neighbor", "placed_on", "unlocks_after_catches", "max_active", "verified"],
+  "refs": {},
+  "rows": [
+    { "id": "tin_can_alarm", "prop_model": "", "effect": "noise only", "ragdoll_ms": 0, "alerts_neighbor": true, "placed_on": "route", "unlocks_after_catches": 1, "max_active": 4, "verified": false },
+    { "id": "bear_trap", "prop_model": "", "effect": "player stuck and ragdolled", "ragdoll_ms": 2500, "alerts_neighbor": true, "placed_on": "route", "unlocks_after_catches": 2, "max_active": 3, "verified": false },
+    { "id": "board_up", "prop_model": "", "effect": "blocks the window or door the player last used", "ragdoll_ms": 0, "alerts_neighbor": false, "placed_on": "entry", "unlocks_after_catches": 3, "max_active": 2, "verified": false }
+  ]
+}

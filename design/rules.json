@@ -1,0 +1,13 @@
+{
+  "sheet": "rules",
+  "about": "Tunable numbers. One row = one rule.",
+  "columns": ["id", "value", "unit", "used_by", "verified"],
+  "refs": { "used_by": "systems" },
+  "rows": [
+    { "id": "catches_before_cops", "value": 3, "unit": "catches", "used_by": "wanted_escalation", "verified": false },
+    { "id": "cops_wanted_stars", "value": 2, "unit": "stars", "used_by": "wanted_escalation", "verified": false },
+    { "id": "catch_fade_ms", "value": 1500, "unit": "ms", "used_by": "caught_reset", "verified": false },
+    { "id": "lose_player_after_s", "value": 8, "unit": "s", "used_by": "neighbor_ai", "verified": false },
+    { "id": "online_check_interval_ms", "value": 1000, "unit": "ms", "used_by": "story_mode_guard", "verified": false }
+  ]
+}

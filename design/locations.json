@@ -1,0 +1,16 @@
+{
+  "sheet": "locations",
+  "about": "Places in Los Santos. Coordinates must be read in the running game (story mode) before they count as verified.",
+  "columns": ["id", "kind", "x", "y", "z", "heading", "door_model", "verified"],
+  "refs": {},
+  "rows": [
+    { "id": "neighbor_house", "kind": "house (must be an enterable story-mode interior; pick in game)", "x": null, "y": null, "z": null, "heading": null, "door_model": "n/a", "verified": false },
+    { "id": "front_door", "kind": "door", "x": null, "y": null, "z": null, "heading": null, "door_model": "", "verified": false },
+    { "id": "back_window", "kind": "door", "x": null, "y": null, "z": null, "heading": null, "door_model": "", "verified": false },
+    { "id": "basement_door", "kind": "door", "x": null, "y": null, "z": null, "heading": null, "door_model": "", "verified": false },
+    { "id": "spawn_red_key", "kind": "item spawn", "x": null, "y": null, "z": null, "heading": 0, "door_model": "n/a", "verified": false },
+    { "id": "spawn_crowbar", "kind": "item spawn", "x": null, "y": null, "z": null, "heading": 0, "door_model": "n/a", "verified": false },
+    { "id": "spawn_basement_key", "kind": "item spawn", "x": null, "y": null, "z": null, "heading": 0, "door_model": "n/a", "verified": false },
+    { "id": "catch_respawn", "kind": "where the player wakes up after a catch (outside the house)", "x": null, "y": null, "z": null, "heading": null, "door_model": "n/a", "verified": false }
+  ]
+}

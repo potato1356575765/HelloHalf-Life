@@ -1,0 +1,14 @@
+{
+  "sheet": "neighbor_states",
+  "about": "The Neighbor's AI states. One row = one state.",
+  "columns": ["id", "enter_when", "move_speed", "sight_range_m", "fov_deg", "hearing_range_m", "next_state", "verified"],
+  "refs": { "next_state": "neighbor_states" },
+  "rows": [
+    { "id": "patrol", "enter_when": "default; or return_home finished", "move_speed": 1.0, "sight_range_m": 18, "fov_deg": 110, "hearing_range_m": 8, "next_state": "suspicious", "verified": false },
+    { "id": "suspicious", "enter_when": "heard player, or saw player for under 1s, or a trap fired", "move_speed": 1.4, "sight_range_m": 22, "fov_deg": 130, "hearing_range_m": 12, "next_state": "chase", "verified": false },
+    { "id": "chase", "enter_when": "saw player for 1s or more inside the yard or house", "move_speed": 2.2, "sight_range_m": 30, "fov_deg": 160, "hearing_range_m": 15, "next_state": "catch", "verified": false },
+    { "id": "catch", "enter_when": "within 1.2 m of player during chase", "move_speed": 0, "sight_range_m": 0, "fov_deg": 0, "hearing_range_m": 0, "next_state": "set_trap", "verified": false },
+    { "id": "set_trap", "enter_when": "right after a catch", "move_speed": 1.0, "sight_range_m": 18, "fov_deg": 110, "hearing_range_m": 8, "next_state": "return_home", "verified": false },
+    { "id": "return_home", "enter_when": "lost the player for 8s, or trap placed", "move_speed": 1.2, "sight_range_m": 18, "fov_deg": 110, "hearing_range_m": 8, "next_state": "patrol", "verified": false }
+  ]
+}
